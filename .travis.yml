@@ -7,4 +7,4 @@ install:
    - composer update
 
 script:
-    - phpunit --color tests/I8lnPluginTest.php
+    - php vendor/phpunit/phpunit/phpunit tests/I8lnPluginTest.php --color
