@@ -1,7 +1,7 @@
 <?php
 
-require "../vendor/autoload.php";
-require_once "../src/I8lnPlugin.php";
+require "vendor/autoload.php";
+require_once "src/I8lnPlugin.php";
 
 use Rain\Tpl;
 
@@ -14,7 +14,7 @@ class I8lnPluginTest extends phpunit\framework\TestCase {
 		$t = new Tpl;
 		$t->draw($templateName, TRUE);
 
-		$filename = glob('cache/*.php')[0];
+		$filename = glob('tests/cache/*.php')[0];
 		$content = file_get_contents($filename);
 		unlink($filename);
 
@@ -25,8 +25,8 @@ class I8lnPluginTest extends phpunit\framework\TestCase {
 	public static function setUpBeforeClass() {
 
 		$config = array(
-			"tpl_dir" => "./",
-			"cache_dir" => "cache/"
+			"tpl_dir" => "tests/",
+			"cache_dir" => "tests/cache/"
 		);
 
 		Tpl::configure($config);
