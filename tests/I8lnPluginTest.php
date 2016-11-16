@@ -4,7 +4,7 @@ require_once "src/I8lnPlugin.php";
 
 use Rain\Tpl;
 
-class I8lnPluginTest extends phpunit\framework\TestCase {
+class I8lnPluginTest extends PHPUnit_Framework_TestCase {
 
 	public static $TPLBaseText = '<?php if(!class_exists(\'Rain\Tpl\')){exit;}?>';
 
