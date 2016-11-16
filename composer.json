@@ -1,0 +1,7 @@
+{
+    "name": "teromene/raintplang",
+    "description": "A plugin to do localization in RainTPL",
+    "require": {
+        "rain/raintpl": "> 3.0.0"
+    }
+}

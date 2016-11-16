@@ -1,0 +1,3 @@
+tests/cache/*.php
+vendor/
+composer.lock
