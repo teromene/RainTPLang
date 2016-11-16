@@ -1,5 +1,5 @@
 <?php
-
+require_once 'PHPUnit/Autoload.php';
 require "vendor/autoload.php";
 require_once "src/I8lnPlugin.php";
 
