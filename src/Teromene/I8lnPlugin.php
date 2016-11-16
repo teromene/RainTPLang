@@ -1,5 +1,5 @@
 <?php
-namespace Rain\Tpl\Plugin;
+namespace Teromene;
 
 class I8lnPlugin extends \Rain\Tpl\Plugin{
 
