@@ -1,6 +1,6 @@
 <?php
 require "vendor/autoload.php";
-require_once "src/I8lnPlugin.php";
+require_once "src/Teromene/I8lnPlugin.php";
 
 use Rain\Tpl;
 
@@ -29,7 +29,7 @@ class I8lnPluginTest extends PHPUnit_Framework_TestCase {
 		);
 
 		Tpl::configure($config);
-		Tpl::registerPlugin( new Tpl\Plugin\I8lnPlugin() );
+		Tpl::registerPlugin( new Teromene\I8lnPlugin() );
 
 	}
 
@@ -51,7 +51,7 @@ class I8lnPluginTest extends PHPUnit_Framework_TestCase {
 
 	public function testCustomFunctionSingleQuotes() {
 
-		Tpl\Plugin\I8lnPlugin::setI8lnFunction("gettext");
+		Teromene\I8lnPlugin::setI8lnFunction("gettext");
 
 		$expectedString = self::$TPLBaseText . "<?php echo gettext('Hello world !'); ?>\n\n";
 		$this->assertEquals($expectedString, self::getTemplateString("testSingleQuotes"), 'The expected value for default function single quotes is wrong !'); 
@@ -61,7 +61,7 @@ class I8lnPluginTest extends PHPUnit_Framework_TestCase {
 
 	public function testCustomFunctionDoubleQuotes() {
 
-		Tpl\Plugin\I8lnPlugin::setI8lnFunction("gettext");
+		Teromene\I8lnPlugin::setI8lnFunction("gettext");
 
 		$expectedString = self::$TPLBaseText . "<?php echo gettext(\"Hello world !\"); ?>\n\n";
 		$this->assertEquals($expectedString, self::getTemplateString("testDoubleQuotes"), 'The expected value for default function single quotes is wrong !'); 
